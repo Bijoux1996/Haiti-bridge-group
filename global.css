@@ -1,0 +1,151 @@
+@import url(https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap);
+:root {
+  /* Overlay layers */
+  --z-overlay: 400;
+
+  --z-spotlight: 1000; /* Tutorial spotlights/guided help */
+
+  /* System layers */
+  --z-critical: 2000; /* Critical system notifications */
+
+  /* spacing */
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+  --spacing-20: 5rem;
+}
+
+:root {
+  /* Core Palette */
+  --background: #F4F6F8;
+  --foreground: #0B1320;
+
+  --surface: #FFFFFF;
+  --surface-foreground: #0B1320;
+  
+  --sidebar: #0F2942;
+  --sidebar-foreground: #FFFFFF;
+  
+  --card: #FFFFFF;
+  --card-foreground: #0B1320;
+  
+  --popup: #FFFFFF;
+  --popup-foreground: #0B1320;
+
+  /* Brand Colors */
+  --primary: #0F2942;
+  --primary-foreground: #FFFFFF;
+  
+  --secondary: #C59B27;
+  --secondary-foreground: #FFFFFF;
+  
+  --accent: #E2E8F0;
+  --accent-foreground: #0F2942;
+  
+  --muted: #E9ECEF;
+  --muted-foreground: #64748B;
+
+  /* Semantic Colors */
+  --success: #059669;
+  --success-foreground: #FFFFFF;
+  
+  --error: #DC2626;
+  --error-foreground: #FFFFFF;
+  
+  --warning: #D97706;
+  --warning-foreground: #FFFFFF;
+  
+  --info: #2563EB;
+  --info-foreground: #FFFFFF;
+  --info-hover: #1D4ED8;
+  --info-active: #1E40AF;
+
+  /* Feature-Specific Colors */
+  --whatsapp: #25D366;
+  --whatsapp-foreground: #FFFFFF;
+  --verified-badge: #C59B27;
+
+  --border: #E2E8F0;
+
+  /* Typography */
+  --font-family-base: "Work Sans", system-ui, sans-serif;
+  --font-family-display: "DM Serif Display", Georgia, serif;
+  --font-family-monospace: "JetBrains Mono", monospace;
+  --font-family-cursive: cursive;
+
+  /* Border Radius */
+  --radius-sm: 0.25rem;
+  --radius: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1.25rem;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(11 19 32 / 0.05);
+  --shadow: 0 4px 6px -1px rgb(11 19 32 / 0.05), 0 2px 4px -2px rgb(11 19 32 / 0.05);
+  --shadow-md: 0 10px 15px -3px rgb(11 19 32 / 0.08), 0 4px 6px -4px rgb(11 19 32 / 0.04);
+  --shadow-lg: 0 20px 25px -5px rgb(11 19 32 / 0.1), 0 8px 10px -6px rgb(11 19 32 / 0.04);
+  --shadow-focus: 0 0 0 3px rgba(15, 41, 66, 0.2);
+
+  /* Animation */
+  --animation-duration-fast: 150ms;
+  --animation-duration-normal: 250ms;
+  --animation-duration-slow: 400ms;
+
+  /* Chart Colors (Dashboard) */
+  --chart-color-1: #0F2942;
+  --chart-color-2: #C59B27;
+  --chart-color-3: #3B82F6;
+  --chart-color-4: #10B981;
+  --chart-color-5: #64748B;
+}
+
+.dark {
+  --background: #070D16;
+  --foreground: #F4F6F8;
+
+  --surface: #0F1724;
+  --surface-foreground: #F4F6F8;
+  
+  --sidebar: #0B1320;
+  --sidebar-foreground: #F4F6F8;
+  
+  --card: #0F1724;
+  --card-foreground: #F4F6F8;
+  
+  --popup: #131D2D;
+  --popup-foreground: #F4F6F8;
+
+  --primary: #4A90E2;
+  --primary-foreground: #FFFFFF;
+  
+  --secondary: #D4AF37;
+  --secondary-foreground: #070D16;
+  
+  --accent: #1E293B;
+  --accent-foreground: #F4F6F8;
+  
+  --muted: #162032;
+  --muted-foreground: #94A3B8;
+
+  --border: #1E293B;
+
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+  --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.3);
+  --shadow-md: 0 10px 15px -3px rgb(0 0 0 / 0.4), 0 4px 6px -4px rgb(0 0 0 / 0.2);
+  --shadow-lg: 0 20px 25px -5px rgb(0 0 0 / 0.5), 0 8px 10px -6px rgb(0 0 0 / 0.3);
+  --shadow-focus: 0 0 0 3px rgba(74, 144, 226, 0.3);
+
+  --chart-color-1: #4A90E2;
+  --chart-color-2: #D4AF37;
+  --chart-color-3: #60A5FA;
+  --chart-color-4: #34D399;
+  --chart-color-5: #94A3B8;
+}
