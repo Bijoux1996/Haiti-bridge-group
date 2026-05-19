@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
-import { GlobalContextProviders } from "./components/_globalContextProviders";
 import Page_0 from "./pages/admin.tsx";
 import PageLayout_0 from "./pages/admin.pageLayout.tsx";
 import Page_1 from "./pages/login.tsx";
@@ -142,7 +141,6 @@ export function App() {
   return (
     <BrowserRouter future={{ v7_startTransition: false, v7_relativeSplatPath: false }}>
       <ScrollManager />
-      <GlobalContextProviders>
         <Routes>
           {toElement({ trie: buildLayoutTrie({
 "./pages/admin.tsx": PageLayout_0,
@@ -159,7 +157,6 @@ export function App() {
 }), fileNameToRoute, makePageRoute })} 
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </GlobalContextProviders>
     </BrowserRouter>
   );
 }
