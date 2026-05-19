@@ -1,0 +1,146 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  background-color: var(--background);
+}
+
+.header {
+  background-color: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: var(--spacing-8) var(--spacing-6);
+}
+
+.headerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  font-family: var(--font-family-display);
+  font-size: 2.5rem;
+  color: var(--foreground);
+  margin: 0 0 var(--spacing-2) 0;
+  font-weight: 600;
+}
+
+.subtitle {
+  color: var(--muted-foreground);
+  font-size: 1rem;
+  margin: 0;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: var(--spacing-8) var(--spacing-6);
+  flex: 1;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+}
+
+.tabsList {
+  background-color: var(--surface);
+  padding: var(--spacing-2);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  display: inline-flex;
+  width: fit-content;
+  gap: var(--spacing-2);
+}
+
+.tabsTrigger {
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-3) var(--spacing-6);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-weight: 500;
+}
+
+.tabsTrigger[data-state="active"] {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  box-shadow: var(--shadow-sm);
+}
+
+.tabsTrigger[data-state="active"]::after {
+  display: none;
+}
+
+.tabsContent {
+  animation: fadeIn var(--animation-duration-normal) ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.subscriptionCard {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-6);
+  box-shadow: var(--shadow-sm);
+  max-width: 600px;
+}
+
+.subscriptionCard h3 {
+  margin-top: 0;
+  margin-bottom: var(--spacing-4);
+  font-size: 1.25rem;
+  color: var(--foreground);
+}
+
+.subscriptionCard p {
+  color: var(--muted-foreground);
+  margin-bottom: var(--spacing-6);
+}
+
+.subscriptionDetails {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-6);
+}
+
+.detailRow {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+}
+
+.detailLabel {
+  font-weight: 500;
+  color: var(--muted-foreground);
+  width: 100px;
+}
+
+.detailValue {
+  color: var(--foreground);
+  font-weight: 500;
+}
+
+.pricingButton {
+  margin-top: var(--spacing-4);
+}
+
+.error {
+  color: var(--error);
+  padding: var(--spacing-4);
+  background-color: color-mix(in srgb, var(--error) 15%, var(--surface));
+  border-radius: var(--radius-md);
+  border: 1px solid color-mix(in srgb, var(--error) 20%, var(--surface));
+}

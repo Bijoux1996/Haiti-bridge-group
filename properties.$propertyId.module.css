@@ -1,0 +1,271 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-6);
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  color: var(--muted-foreground);
+  text-decoration: none;
+  font-weight: 500;
+  margin-bottom: var(--spacing-6);
+  transition: color 0.2s;
+}
+
+.backLink:hover {
+  color: var(--primary);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: var(--spacing-6);
+  gap: var(--spacing-4);
+}
+
+.badges {
+  display: flex;
+  gap: var(--spacing-2);
+  margin-bottom: var(--spacing-3);
+}
+
+.title {
+  font-family: var(--font-family-display);
+  font-size: 2.5rem;
+  margin: 0 0 var(--spacing-2);
+  color: var(--foreground);
+  line-height: 1.1;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  color: var(--muted-foreground);
+  font-size: 1.125rem;
+  margin: 0;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+}
+
+.price {
+  font-family: var(--font-family-display);
+  font-size: 2.5rem;
+  color: var(--primary);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--spacing-8);
+}
+
+.features {
+  display: flex;
+  gap: var(--spacing-6);
+  padding: var(--spacing-6);
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--spacing-8);
+  border: 1px solid var(--border);
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  color: var(--foreground);
+}
+
+.featureItem svg {
+  color: var(--primary);
+  opacity: 0.8;
+}
+
+.featureText {
+  display: flex;
+  flex-direction: column;
+}
+
+.featureValue {
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.1;
+}
+
+.featureLabel {
+  color: var(--muted-foreground);
+  font-size: 0.875rem;
+}
+
+.section h2 {
+  font-family: var(--font-family-display);
+  font-size: 1.75rem;
+  margin: 0 0 var(--spacing-4);
+}
+
+.description p {
+  color: var(--foreground);
+  line-height: 1.8;
+  margin-bottom: var(--spacing-4);
+  font-size: 1.0625rem;
+}
+
+.reviewsSection {
+  margin-top: var(--spacing-8);
+  padding-top: var(--spacing-8);
+  border-top: 1px solid var(--border);
+}
+
+.reportSection {
+  margin-top: var(--spacing-6);
+  padding-top: var(--spacing-6);
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+  position: sticky;
+  top: var(--spacing-6);
+  align-self: start;
+}
+
+.contactCard {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-6);
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border);
+}
+
+.contactCard h3 {
+  margin: 0 0 var(--spacing-4);
+  font-size: 1.25rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: var(--spacing-3);
+}
+
+.agentInfo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-6);
+}
+
+.agentAvatar, .agentAvatarPlaceholder {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.agentAvatarPlaceholder {
+  background: var(--muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted-foreground);
+}
+
+.agentDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.agentName {
+  font-weight: 600;
+  font-size: 1.125rem;
+  color: var(--foreground);
+}
+
+.agentRole {
+  color: var(--muted-foreground);
+  font-size: 0.875rem;
+}
+
+.contactActions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.actionButton {
+  width: 100%;
+}
+
+.noContact {
+  color: var(--muted-foreground);
+  font-size: 0.875rem;
+  text-align: center;
+  font-style: italic;
+}
+
+.errorContainer {
+  max-width: 600px;
+  margin: var(--spacing-20) auto;
+  text-align: center;
+  padding: var(--spacing-12);
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.errorContainer h2 {
+  font-family: var(--font-family-display);
+  font-size: 2rem;
+  margin-bottom: var(--spacing-4);
+}
+
+.skeletonHeader {
+  height: 80px;
+  margin-bottom: var(--spacing-6);
+}
+
+.skeletonGallery {
+  height: 500px;
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--spacing-8);
+}
+
+.skeletonMain {
+  height: 300px;
+  border-radius: var(--radius-lg);
+}
+
+.skeletonSidebar {
+  height: 250px;
+  border-radius: var(--radius-lg);
+}
+
+@media (max-width: 900px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .contentGrid {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    order: -1;
+    margin-bottom: var(--spacing-6);
+    position: static;
+  }
+  .features {
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,148 @@
+@layer base {
+  .page {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--background);
+  }
+
+  .heroSection {
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+    padding: var(--spacing-20) var(--spacing-6) var(--spacing-16);
+    text-align: center;
+  }
+
+  .heroContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeInDown var(--animation-duration-normal) ease-out forwards;
+  }
+
+  .heroTitle {
+    font-family: var(--font-family-display);
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: var(--spacing-4);
+  }
+
+  .heroSubtitle {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: color-mix(in srgb, var(--primary-foreground) 85%, transparent);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .plansSection {
+    position: relative;
+    padding: 0 var(--spacing-6) var(--spacing-20);
+    background-color: var(--background);
+  }
+
+  .plansContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    /* Pull the cards slightly into the hero section for depth */
+    margin-top: calc(var(--spacing-12) * -1);
+  }
+
+  /* Modal Styles */
+  .modalBody {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-6);
+    padding: var(--spacing-2) 0;
+  }
+
+  .fieldGroup {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+  }
+
+  .fieldLabel {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--popup-foreground);
+  }
+
+  .instructionsBox {
+    background-color: color-mix(in srgb, var(--primary) 5%, transparent);
+    border: 1px solid color-mix(in srgb, var(--primary) 20%, transparent);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-4);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    color: var(--popup-foreground);
+  }
+
+  .highlightMethod {
+    font-weight: 600;
+    color: var(--primary);
+  }
+
+  .successTitle {
+    color: var(--success) !important;
+  }
+
+  .successBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--spacing-4);
+    padding: var(--spacing-4) 0 var(--spacing-6);
+  }
+
+  .successText {
+    font-size: 1rem;
+    color: var(--popup-foreground);
+    line-height: 1.5;
+  }
+
+  .whatsappButton {
+    background-color: var(--whatsapp) !important;
+    color: var(--whatsapp-foreground) !important;
+    border-color: var(--whatsapp) !important;
+    font-weight: 600;
+    width: 100%;
+  }
+
+  .whatsappButton:hover {
+    background-color: color-mix(in srgb, var(--whatsapp) 85%, black) !important;
+    border-color: color-mix(in srgb, var(--whatsapp) 85%, black) !important;
+  }
+
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .heroSection {
+      padding: var(--spacing-12) var(--spacing-4) var(--spacing-12);
+    }
+
+    .heroTitle {
+      font-size: 2.5rem;
+    }
+
+    .heroSubtitle {
+      font-size: 1.125rem;
+    }
+
+    .plansContainer {
+      margin-top: 0;
+      padding-top: var(--spacing-8);
+    }
+  }
+}
